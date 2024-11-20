@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import BrandCard from './BrandCard'; // Import the BrandCard component
+import CouponList from './CouponList';
 
 const Coupons = () => {
   const [brands, setBrands] = useState([]); // State to store brand data
@@ -21,7 +22,7 @@ const Coupons = () => {
   const brandsOnSale = brands.filter(brand => brand.isSaleOn);
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-6 p-6">
       {brandsOnSale.length === 0 ? (
         <p>No brands are on sale right now.</p>
       ) : (
@@ -32,6 +33,8 @@ const Coupons = () => {
             brandLogo={brand.brand_logo}
             totalCoupons={brand.coupons.length}
             category={brand.category}
+            description={brand.coupons[0].description}
+            discount={brand.coupons[0].coupon_code}
           />
         ))
       )}
