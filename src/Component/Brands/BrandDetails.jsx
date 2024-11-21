@@ -1,16 +1,17 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-
-
-import { CopyToClipboard } from 'react-copy-to-clipboard';
-import { toast } from 'react-toastify';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
-// Toast for showing success
 
 const BrandDetails = () => {
+  // Initialize AOS on component mount
+  useEffect(() => {
+    AOS.init({ once: true }); // Animations run only once
+  }, []);
+
   const { brandId } = useParams(); // Get the brand ID from the URL
- // Get the current user from AuthContext
-  const {user} = useContext(AuthContext);
+  const { user } = useContext(AuthContext); // Get the current user from AuthContext
   const [brand, setBrand] = useState(null);
   const [coupons, setCoupons] = useState([]);
   const navigate = useNavigate();
@@ -31,47 +32,59 @@ const BrandDetails = () => {
     return <p>Loading brand details...</p>;
   }
 
-  // Handle "Use Now" button click
-  const handleUseNow = (brandLink) => {
-    window.open(brandLink, '_blank');
-  };
-
-  // Show success toast after copying the coupon code
-  const handleCopySuccess = () => {
-    toast.success('Coupon code copied successfully!');
-  };
-
   return (
-    <div className='card bg-base-100 w-96 shadow-xl mx-auto mt-12'>
+    <div
+      style={{
+        background: 'linear-gradient(180deg, rgb(240, 240, 240), rgb(230, 245, 250))',
+        minHeight: '100vh',
+        padding: '2rem 0',
+      }}
+    >
+      <section className="max-w-7xl mx-auto p-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {/* Product Image */}
+          <div
+            className="flex justify-center items-center"
+            data-aos="fade-right"
+            data-aos-duration="1200"
+          >
+            <img
+              src={brand.brand_logo}
+              alt={brand.brand_name}
+              className="w-full max-w-xs md:max-w-md rounded-lg shadow-lg"
+            />
+          </div>
 
-        
-      <h1>{brand.brand_name}</h1>
-      <figure className="px-10 pt-10">
-    <img
-      src={brand.brand_logo} alt={brand.brand_name}
+          {/* Product Info */}
+          <div data-aos="fade-left" data-aos-duration="1200">
+            <h1
+              className="text-5xl font-semibold text-gray-900"
+              data-aos="zoom-in"
+              data-aos-delay="200"
+            >
+              {brand.brand_name}
+            </h1>
+            <p
+              className="mt-2 text-lg text-gray-700"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
+              {brand.description}
+            </p>
 
-      className="rounded-xl" />
-  </figure>
-      <p>Rating: {brand.rating}</p>
-      <p>{brand.description}</p>
-
-      <h2>Available Coupons</h2>
-      <div className="coupons-grid">
-        {coupons.map((coupon) => (
-          <div className="coupon-card" key={coupon.code}>
-            <h3>{coupon.title}</h3>
-            <p>{coupon.description}</p>
-            <div className="coupon-actions">
-              <CopyToClipboard text={coupon.code} onCopy={handleCopySuccess}>
-                <button>Copy Code</button>
-              </CopyToClipboard>
-              <button onClick={() => handleUseNow(brand.brand_link)}>Use Now</button>
+            {/* Coupons */}
+            <div className="mt-6" data-aos="fade-up" data-aos-delay="500">
+              {coupons.map((coupon) => (
+                <div className="coupon-card mt-4" key={coupon.code}>
+                  <h3 className="font-semibold bg-slate-900">{coupon.title}</h3>
+                  <p className="text-sm text-gray-600">{coupon.description}</p>
+                  <p className="text-sm text-gray-600">{coupon.code}</p>
+                </div>
+              ))}
             </div>
           </div>
-        ))}
-      </div>
-
-       {/* Toast notification container */}
+        </div>
+      </section>
     </div>
   );
 };

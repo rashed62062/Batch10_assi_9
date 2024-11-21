@@ -28,6 +28,14 @@ const Navar = () => {
           Home
         </NavLink>
       </li>
+      <li>
+        <NavLink
+          to="/teams"
+          className={({ isActive }) => (isActive ? "active" : "")}
+        >
+          Teams
+        </NavLink>
+      </li>
 
 
 
@@ -40,7 +48,7 @@ const Navar = () => {
         Brands
         </NavLink>
       </li>
-
+ 
       {
       user && (
         <>

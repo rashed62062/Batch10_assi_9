@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import BrandCard from './BrandCard'; // Import the BrandCard component
-import CouponList from './CouponList';
 
 const Coupons = () => {
   const [brands, setBrands] = useState([]); // State to store brand data

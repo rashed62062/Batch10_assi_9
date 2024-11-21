@@ -1,6 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import Home from "../Layout/Home";
-import Orders from "../Component/Orders";
+// import Orders from "../Component/Orders";
 import Coupons from "../Component/CouponList/Coupons";
 import Login from "../Component/From/Login";
 import Myprofile from "../Component/MyProfile/Myprofile";
@@ -10,6 +10,7 @@ import PrivateRoutes from "../RouteProvider/PrivateRoutes";
 import Banner from "../Component/Home/Banner";
 import BrandDetails from "../Component/Brands/BrandDetails"; // Import dynamic details component
 import NotFound from "../Component/NotFound ";
+import Theams from "../Component/Theams/Theams";
 
 const router = createBrowserRouter([
   {
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Banner />, // Render the banner component at the root path
+      },
+      {
+        path: "teams",
+        element: <Theams></Theams> // Render the banner component at the root path
       },
       {
         path: "coupons",
@@ -38,10 +43,7 @@ const router = createBrowserRouter([
           <BrandDetails />
         </PrivateRoutes>,
       },
-      {
-        path: "order",
-        element: <Orders />,
-      },
+  
       {
         path: "login",
         element: <Login />,
