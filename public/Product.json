@@ -1,166 +1,243 @@
 [
-    {
-      "id": "1b23e4f5-7a89-4cde-b123-5d67e89abc12",
-      "brand_name": "TechGear",
-      "rating": 4.5,
-      "description": "Leading provider of top-notch gadgets and electronics.",
-      "brand_logo": "https://picsum.photos/100/100?random=1",
-      "shop_Link": "https://techgear.com",
-      "category": "Electronics",
-      "isSaleOn": true,
-      "coupons": [
-        {
-          "coupon_code": "SAVE20",
-          "description": "20% off on all orders above $100.",
-          "expiry_date": "2025-02-15",
-          "condition": "Minimum order value is $100.",
-          "coupon_type": "Percentage Off"
-        },
-        {
-          "coupon_code": "FREESHIP",
-          "description": "Free shipping on orders over $50.",
-          "expiry_date": "2024-12-31",
-          "condition": "Standard shipping only.",
-          "coupon_type": "Free Shipping"
-        }
-      ]
-    },
-    {
-      "id": "2c34f6g7-8b90-5def-c234-6e78f90bcd34",
-      "brand_name": "StyleTrendz",
-      "rating": 4.0,
-      "description": "Stylish clothing and accessories for every occasion.",
-      "brand_logo": "https://picsum.photos/100/100?random=2",
-      "shop_Link": "https://styletrendz.com",
-      "category": "Fashion",
-      "isSaleOn": false,
-      "coupons": [
-        {
-          "coupon_code": "BOGO50",
-          "description": "Buy one, get 50% off on the second item.",
-          "expiry_date": "2024-11-30",
-          "condition": "Applicable to select items only.",
-          "coupon_type": "Buy One Get One"
-        },
-        {
-          "coupon_code": "WELCOME10",
-          "description": "10% off for new customers.",
-          "expiry_date": "2025-03-01",
-          "condition": "Valid only for the first purchase.",
-          "coupon_type": "Flat Discount"
-        }
-      ]
-    },
-    {
-      "id": "3d45h7i8-9c01-6fgh-d345-7f89g01def56",
-      "brand_name": "HomeLux",
-      "rating": 4.7,
-      "description": "Affordable and luxurious home decor solutions.",
-      "brand_logo": "https://picsum.photos/100/100?random=3",
-      "shop_Link": "https://homelux.com",
-      "category": "Home Decor",
-      "isSaleOn": true,
-      "coupons": [
-        {
-          "coupon_code": "LUXE30",
-          "description": "30% off on luxury furniture items.",
-          "expiry_date": "2024-12-15",
-          "condition": "Not valid on discounted items.",
-          "coupon_type": "Percentage Off"
-        },
-        {
-          "coupon_code": "SHIPFREE",
-          "description": "Free shipping on all orders.",
-          "expiry_date": "2025-01-01",
-          "condition": "No minimum order value required.",
-          "coupon_type": "Free Shipping"
-        },
-        {
-          "coupon_code": "NEWYEAR50",
-          "description": "50% off New Year clearance sale.",
-          "expiry_date": "2025-01-10",
-          "condition": "Only on select clearance items.",
-          "coupon_type": "Flat Discount"
-        }
-      ]
-    },
-    {
-      "id": "4e56i8j9-0d12-7ghi-e456-8g90h12efg78",
-      "brand_name": "BookNest",
-      "rating": 3.9,
-      "description": "Your one-stop shop for books and stationery.",
-      "brand_logo": "https://picsum.photos/100/100?random=4",
-      "shop_Link": "https://booknest.com",
-      "category": "Books",
-      "isSaleOn": false,
-      "coupons": [
-        {
-          "coupon_code": "READ10",
-          "description": "10% off on your first purchase.",
-          "expiry_date": "2025-04-15",
-          "condition": "Valid only for first-time customers.",
-          "coupon_type": "Flat Discount"
-        },
-        {
-          "coupon_code": "BULKBUY20",
-          "description": "20% off on bulk purchases of $200 or more.",
-          "expiry_date": "2024-12-31",
-          "condition": "Applies to books only.",
-          "coupon_type": "Percentage Off"
-        }
-      ]
-    },
-    {
-      "id": "5f67j9k0-1e23-8hij-f567-9h01i23fgh90",
-      "brand_name": "GlowBeauty",
-      "rating": 4.3,
-      "description": "Enhance your beauty with our premium products.",
-      "brand_logo": "https://picsum.photos/100/100?random=5",
-      "shop_Link": "https://glowbeauty.com",
-      "category": "Beauty",
-      "isSaleOn": true,
-      "coupons": [
-        {
-          "coupon_code": "GLOW20",
-          "description": "20% off on skincare products.",
-          "expiry_date": "2025-02-28",
-          "condition": "Valid on full-priced items only.",
-          "coupon_type": "Percentage Off"
-        },
-        {
-          "coupon_code": "FREESHIPBEAUTY",
-          "description": "Free shipping on beauty orders above $30.",
-          "expiry_date": "2024-11-30",
-          "condition": "Applies to standard shipping.",
-          "coupon_type": "Free Shipping"
-        }
-      ]
-    },
-    {
-      "id": "6g78k0l1-2f34-9ijk-g678-0i12j34ghi12",
-      "brand_name": "FreshMart",
-      "rating": 4.8,
-      "description": "Fresh groceries delivered to your doorstep.",
-      "brand_logo": "https://picsum.photos/100/100?random=6",
-      "shop_Link": "https://freshmart.com",
-      "category": "Groceries",
-      "isSaleOn": true,
-      "coupons": [
-        {
-          "coupon_code": "FRESH15",
-          "description": "15% off on all orders above $20.",
-          "expiry_date": "2025-03-31",
-          "condition": "Not valid with other discounts.",
-          "coupon_type": "Percentage Off"
-        },
-        {
-          "coupon_code": "FREESHIPPING",
-          "description": "Free shipping on orders over $50.",
-          "expiry_date": "2025-01-15",
-          "condition": "Applicable to standard delivery only.",
-          "coupon_type": "Free Shipping"
-        }
-      ]
-    }
-  ]
-  
+  {
+    "id": "1b23e4f5-7a89-4cde-b123-5d67e89abc12",
+    "brand_name": "TechGear",
+    "rating": 4.5,
+    "description": "Leading provider of top-notch gadgets and electronics.",
+    "brand_logo": "https://picsum.photos/100/100?random=1",
+    "shop_Link": "https://techgear.com",
+    "category": "Electronics",
+    "isSaleOn": true,
+    "coupons": [
+      {
+        "coupon_code": "SAVE20",
+        "description": "20% off on all orders above $100.",
+        "expiry_date": "2025-02-15",
+        "condition": "Minimum order value is $100.",
+        "coupon_type": "Percentage Off"
+      },
+      {
+        "coupon_code": "FREESHIP",
+        "description": "Free shipping on orders over $50.",
+        "expiry_date": "2024-12-31",
+        "condition": "Standard shipping only.",
+        "coupon_type": "Free Shipping"
+      }
+    ]
+  },
+  {
+    "id": "2c34f6g7-8b90-5def-c234-6e78f90bcd34",
+    "brand_name": "StyleTrendz",
+    "rating": 4.0,
+    "description": "Stylish clothing and accessories for every occasion.",
+    "brand_logo": "https://picsum.photos/100/100?random=2",
+    "shop_Link": "https://styletrendz.com",
+    "category": "Fashion",
+    "isSaleOn": false,
+    "coupons": [
+      {
+        "coupon_code": "BOGO50",
+        "description": "Buy one, get 50% off on the second item.",
+        "expiry_date": "2024-11-30",
+        "condition": "Applicable to select items only.",
+        "coupon_type": "Buy One Get One"
+      },
+      {
+        "coupon_code": "WELCOME10",
+        "description": "10% off for new customers.",
+        "expiry_date": "2025-03-01",
+        "condition": "Valid only for the first purchase.",
+        "coupon_type": "Flat Discount"
+      }
+    ]
+  },
+  {
+    "id": "3d45h7i8-9c01-6fgh-d345-7f89g01def56",
+    "brand_name": "HomeLux",
+    "rating": 4.7,
+    "description": "Affordable and luxurious home decor solutions.",
+    "brand_logo": "https://picsum.photos/100/100?random=3",
+    "shop_Link": "https://homelux.com",
+    "category": "Home Decor",
+    "isSaleOn": true,
+    "coupons": [
+      {
+        "coupon_code": "LUXE30",
+        "description": "30% off on luxury furniture items.",
+        "expiry_date": "2024-12-15",
+        "condition": "Not valid on discounted items.",
+        "coupon_type": "Percentage Off"
+      },
+      {
+        "coupon_code": "SHIPFREE",
+        "description": "Free shipping on all orders.",
+        "expiry_date": "2025-01-01",
+        "condition": "No minimum order value required.",
+        "coupon_type": "Free Shipping"
+      },
+      {
+        "coupon_code": "NEWYEAR50",
+        "description": "50% off New Year clearance sale.",
+        "expiry_date": "2025-01-10",
+        "condition": "Only on select clearance items.",
+        "coupon_type": "Flat Discount"
+      }
+    ]
+  },
+  {
+    "id": "4e56i8j9-0d12-7ghi-e456-8g90h12efg78",
+    "brand_name": "BookNest",
+    "rating": 3.9,
+    "description": "Your one-stop shop for books and stationery.",
+    "brand_logo": "https://picsum.photos/100/100?random=4",
+    "shop_Link": "https://booknest.com",
+    "category": "Books",
+    "isSaleOn": false,
+    "coupons": [
+      {
+        "coupon_code": "READ10",
+        "description": "10% off on your first purchase.",
+        "expiry_date": "2025-04-15",
+        "condition": "Valid only for first-time customers.",
+        "coupon_type": "Flat Discount"
+      },
+      {
+        "coupon_code": "BULKBUY20",
+        "description": "20% off on bulk purchases of $200 or more.",
+        "expiry_date": "2024-12-31",
+        "condition": "Applies to books only.",
+        "coupon_type": "Percentage Off"
+      }
+    ]
+  },
+  {
+    "id": "5f67j9k0-1e23-8hij-f567-9h01i23fgh90",
+    "brand_name": "GlowBeauty",
+    "rating": 4.3,
+    "description": "Enhance your beauty with our premium products.",
+    "brand_logo": "https://picsum.photos/100/100?random=5",
+    "shop_Link": "https://glowbeauty.com",
+    "category": "Beauty",
+    "isSaleOn": true,
+    "coupons": [
+      {
+        "coupon_code": "GLOW20",
+        "description": "20% off on skincare products.",
+        "expiry_date": "2025-02-28",
+        "condition": "Valid on full-priced items only.",
+        "coupon_type": "Percentage Off"
+      },
+      {
+        "coupon_code": "FREESHIPBEAUTY",
+        "description": "Free shipping on beauty orders above $30.",
+        "expiry_date": "2024-11-30",
+        "condition": "Applies to standard shipping.",
+        "coupon_type": "Free Shipping"
+      }
+    ]
+  },
+  {
+    "id": "6g78k0l1-2f34-9ijk-g678-0i12j34ghi12",
+    "brand_name": "FreshMart",
+    "rating": 4.8,
+    "description": "Fresh groceries delivered to your doorstep.",
+    "brand_logo": "https://picsum.photos/100/100?random=6",
+    "shop_Link": "https://freshmart.com",
+    "category": "Groceries",
+    "isSaleOn": true,
+    "coupons": [
+      {
+        "coupon_code": "FRESH15",
+        "description": "15% off on all orders above $20.",
+        "expiry_date": "2025-03-31",
+        "condition": "Not valid with other discounts.",
+        "coupon_type": "Percentage Off"
+      },
+      {
+        "coupon_code": "FREESHIPPING",
+        "description": "Free shipping on orders over $50.",
+        "expiry_date": "2025-01-15",
+        "condition": "Applicable to standard delivery only.",
+        "coupon_type": "Free Shipping"
+      }
+    ]
+  },
+  {
+    "id": "7h89k1l2-3g45-1ijk-h789-1j23k45gh6i7",
+    "brand_name": "TechToys",
+    "rating": 4.2,
+    "description": "Top-of-the-line toys and gadgets for kids.",
+    "brand_logo": "https://picsum.photos/100/100?random=7",
+    "shop_Link": "https://techtotoys.com",
+    "category": "Toys",
+    "isSaleOn": true,
+    "coupons": [
+      {
+        "coupon_code": "KIDSGADGET15",
+        "description": "15% off on tech toys.",
+        "expiry_date": "2025-01-31",
+        "condition": "Excludes select items.",
+        "coupon_type": "Percentage Off"
+      },
+      {
+        "coupon_code": "FREESHIPKIDS",
+        "description": "Free shipping on all kids' toys.",
+        "expiry_date": "2025-02-01",
+        "condition": "No minimum purchase required.",
+        "coupon_type": "Free Shipping"
+      }
+    ]
+  },
+  {
+    "id": "8i90j1k2-4l67-8m9n-01o12-3p45q67rst89",
+    "brand_name": "GourmetBites",
+    "rating": 4.6,
+    "description": "Delicious gourmet snacks and treats.",
+    "brand_logo": "https://picsum.photos/100/100?random=8",
+    "shop_Link": "https://gourmetbites.com",
+    "category": "Food",
+    "isSaleOn": false,
+    "coupons": [
+      {
+        "coupon_code": "SNACKTIME10",
+        "description": "10% off your first order.",
+        "expiry_date": "2025-05-01",
+        "condition": "New customers only.",
+        "coupon_type": "Flat Discount"
+      },
+      {
+        "coupon_code": "GOURMET15",
+        "description": "15% off on select gourmet items.",
+        "expiry_date": "2025-06-30",
+        "condition": "Excludes gift sets.",
+        "coupon_type": "Percentage Off"
+      }
+    ]
+  },
+  {
+    "id": "9j01k2l3-5m67-9n12-p345-0q67r89st01u",
+    "brand_name": "FitPro",
+    "rating": 4.4,
+    "description": "Premium fitness equipment for a healthy lifestyle.",
+    "brand_logo": "https://picsum.photos/100/100?random=9",
+    "shop_Link": "https://fitpro.com",
+    "category": "Fitness",
+    "isSaleOn": true,
+    "coupons": [
+      {
+        "coupon_code": "FITNESS20",
+        "description": "20% off on all fitness equipment.",
+        "expiry_date": "2025-03-15",
+        "condition": "Not valid with other offers.",
+        "coupon_type": "Percentage Off"
+      },
+      {
+        "coupon_code": "FREESHIPFIT",
+        "description": "Free shipping on orders over $100.",
+        "expiry_date": "2025-04-01",
+        "condition": "Standard shipping only.",
+        "coupon_type": "Free Shipping"
+      }
+    ]
+  }
+]

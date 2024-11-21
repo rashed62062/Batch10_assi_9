@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import BrandCard from './BrandCard'; // Import the BrandCard component
 
+
 const Coupons = () => {
   const [brands, setBrands] = useState([]); // State to store brand data
 
@@ -22,10 +23,12 @@ const Coupons = () => {
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-6 p-6">
+      <h1 className='text-4xl text-teal-300'>Today total coupons</h1>
       {brandsOnSale.length === 0 ? (
         <p>No brands are on sale right now.</p>
       ) : (
         brandsOnSale.map((brand) => (
+          
           <BrandCard
             key={brand._id}
             brandName={brand.brand_name}

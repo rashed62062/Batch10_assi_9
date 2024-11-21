@@ -1,43 +1,49 @@
-import React, { useState } from 'react';
-import { toast } from 'react-toastify';
+import React, { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // Import AOS CSS
 
-const BrandCard = ({discount, brandName, brandLogo, totalCoupons, category, description, code }) => {
-  const [copied, setCopied] = useState(false);
+const BrandCard = ({ discount, brandName, brandLogo, totalCoupons, category, description }) => {
 
-  const handleCopy = () => {
-    navigator.clipboard.writeText(discount);
-    toast.success('Successfully copied to coupon discount code')
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000); // Reset after 2 seconds
-  };
+  // Initialize AOS when the component mounts
+  useEffect(() => {
+    AOS.init({ once: true, duration: 1200 }); // 'once: true' makes animations run only once
+  }, []);
 
   return (
-    <div className="border p-4 rounded shadow-md my-2 flex justify-between items-center">
-      <div className="flex-shrink-0">
+    <div 
+      className="border p-4 rounded shadow-md my-2 flex justify-between items-center"
+      data-aos="zoom-in-up"  // Modern zoom-in-up animation
+      data-aos-duration="1000"  // Set animation duration
+    >
+      <div 
+        className="flex-shrink-0"
+        data-aos="flip-left"  // Flip the image from the left for a modern effect
+        data-aos-duration="1200"
+      >
         <img
-          src={brandLogo || "/default-image.jpg"} // Handle missing image
-          alt={`${brandName} image`}
+          src={brandLogo || '/default-image.jpg'} // Handle missing image
+          alt={`${brandName} logo`}
           className="w-32 h-24 object-cover rounded mt-2"
         />
       </div>
 
       <div className="flex-grow ml-4">
-        <h1 className="font-bold text-2xl text-rose-800">Total Coupons: {totalCoupons || "N/A"}</h1>
-        <h2 className="font-bold text-2xl">{brandName}</h2>
-        {category && <p className="text-sm text-gray-600 text-1xl">Product: {category}</p>}
-        <p className="text-lg">{description}</p>
-        
-      </div>
-
-      <div>
-      <button
-  className="px-4 py-2 bg-blue-500 text-white rounded-lg"
-  onClick={handleCopy}
-  aria-live="assertive"
->
-  {copied ? 'Copied!' : 'Copy Code'}
-</button>
-
+        <h1 
+          className="font-bold text-2xl text-rose-800"
+          data-aos="fade-up"  // Fade up animation for the title
+        >
+          Total Coupons: {totalCoupons || 'N/A'}
+        </h1>
+        <h2 
+          className="font-bold text-2xl"
+          data-aos="fade-left"  // Fade and slide-in effect from the left
+        >
+          {brandName}
+        </h2>
+        {category && <p className="text-sm text-gray-600 text-1xl">{category}</p>}
+        <p className="text-lg" data-aos="zoom-in" data-aos-duration="1000">
+          {description}
+        </p>
       </div>
     </div>
   );

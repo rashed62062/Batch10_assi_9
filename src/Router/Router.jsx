@@ -11,6 +11,7 @@ import Banner from "../Component/Home/Banner";
 import BrandDetails from "../Component/Brands/BrandDetails"; // Import dynamic details component
 import NotFound from "../Component/NotFound ";
 import Theams from "../Component/Theams/Theams";
+import PrivateCouponsPage from "../Component/PrivateCopunsPage/PrivateCouponsPage";
 
 const router = createBrowserRouter([
   {
@@ -29,7 +30,7 @@ const router = createBrowserRouter([
         path: "coupons",
         element: (
           <PrivateRoutes>
-            <Coupons />
+            <PrivateCouponsPage />
           </PrivateRoutes>
         ),
       },

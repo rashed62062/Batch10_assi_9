@@ -1,5 +1,4 @@
 import banner from '../../../img/4685339.jpg';
-import App from '../CouponList/All/App';
 import Coupons from '../CouponList/Coupons';
 import Slider from './Slider';
 
