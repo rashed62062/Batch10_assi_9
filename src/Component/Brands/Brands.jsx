@@ -50,8 +50,20 @@ const Brands = () => {
 
   return (
     <div>
-      <h1>Brands</h1>
-      <img src={banner} alt="Banner" className="w-full" />
+  
+
+  <div className="text-3xl flex flex-col items-center space-y-4">
+  <h1 style={{ color: 'rgb(255, 99, 71)' }}>Discount PRO – Your gateway to exclusive deals and discounts.</h1>
+  <h1 style={{ color: 'rgb(60, 179, 113)' }}>Coupon Haven – Unlock savings, shop smarter.</h1>
+  <h1 style={{ color: 'rgb(65, 105, 225)' }}>BrandVault – Discover, save, and shop with ease.</h1>
+</div>
+
+
+
+
+
+
+      {/* <img src={banner} alt="Banner" className="w-full" /> */}
       <div className="my-4">
         <input
           type="text"

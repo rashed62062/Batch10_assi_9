@@ -1,6 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
 import Home from "../Layout/Home";
-// import Orders from "../Component/Orders";
 import Coupons from "../Component/CouponList/Coupons";
 import Login from "../Component/From/Login";
 import Myprofile from "../Component/MyProfile/Myprofile";
@@ -12,6 +11,8 @@ import BrandDetails from "../Component/Brands/BrandDetails"; // Import dynamic d
 import NotFound from "../Component/NotFound ";
 import Theams from "../Component/Theams/Theams";
 import PrivateCouponsPage from "../Component/PrivateCopunsPage/PrivateCouponsPage";
+import ForgotPassword from "../Component/From/ForgotPassword";
+import UpdateProfile from "../Component/MyProfile/UpdateProfile";
 
 const router = createBrowserRouter([
   {
@@ -24,7 +25,7 @@ const router = createBrowserRouter([
       },
       {
         path: "teams",
-        element: <Theams></Theams> // Render the banner component at the root path
+        element: <Theams />,
       },
       {
         path: "coupons",
@@ -40,14 +41,19 @@ const router = createBrowserRouter([
       },
       {
         path: "brands/:brandId", // Dynamic route for brand details
-        element: <PrivateRoutes>
-          <BrandDetails />
-        </PrivateRoutes>,
+        element: (
+          <PrivateRoutes>
+            <BrandDetails />
+          </PrivateRoutes>
+        ),
       },
-  
       {
         path: "login",
         element: <Login />,
+      },
+      {
+        path: "login/forgot-password", // Separate path for forgot password
+        element: <ForgotPassword />, // This is the page for forgotten password
       },
       {
         path: "register",
@@ -61,11 +67,28 @@ const router = createBrowserRouter([
           </PrivateRoutes>
         ),
       },
+
+
+
+
+
+
+      {
+        path: "myProfile/update",  // New route for updating profile
+        element: (
+          <PrivateRoutes>
+            <UpdateProfile />
+          </PrivateRoutes>
+        ),
+      },
+
+
+
     ],
   },
   {
     path: "*",
-    element: <NotFound />, // Redirect to a 404 page for unmatched paths
+    element: <NotFound></NotFound> // Redirect to a 404 page for unmatched paths
   },
 ]);
 

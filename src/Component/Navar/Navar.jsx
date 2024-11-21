@@ -2,6 +2,8 @@ import { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { toast } from "react-toastify";
+import logo from '../../../img/logo-removebg-preview.png'
+
 
 const Navar = () => {
   const { name, user, singOutUser } = useContext(AuthContext);
@@ -36,9 +38,6 @@ const Navar = () => {
           Teams
         </NavLink>
       </li>
-
-
-
 
       <li>
         <NavLink
@@ -112,7 +111,11 @@ const Navar = () => {
             {links}
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl">{name}</a>
+
+    <div>
+    <img className="h-10 w-20" src={logo} alt="" />
+    </div>
+      
       </div>
 
       {/* Navbar Center */}

@@ -1,11 +1,13 @@
-import { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { FaUserCircle } from "react-icons/fa";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
+import { useNavigate } from "react-router-dom"; // For navigation
 
 const Myprofile = () => {
   const { user } = useContext(AuthContext); // Access user from context
   const [photoURL, setPhotoURL] = useState(null);
   const [loading, setLoading] = useState(true); // To track loading state
+  const navigate = useNavigate(); // To navigate programmatically
 
   useEffect(() => {
     if (user) {
@@ -41,6 +43,13 @@ const Myprofile = () => {
           <h2 className="text-xl font-semibold mb-2">{user?.displayName || "No Name"}</h2>
           {/* User Email */}
           <p className="text-gray-500">{user?.email}</p>
+          {/* Update Button */}
+          <button 
+            onClick={() => navigate('/myProfile/update')} 
+            className="btn btn-primary mt-4"
+          >
+            Update Profile
+          </button>
         </div>
       </div>
     </div>

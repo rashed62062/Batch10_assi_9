@@ -58,6 +58,15 @@ const [loading, setLoading] = useState(true);
     });
   };
 
+  //  Forget password
+  const forgotPassword = () => {
+    return sendPasswordResetEmail (auth, email);
+  };
+
+
+
+
+
   //    observer  Functions
 
   useEffect(() => {
@@ -78,6 +87,7 @@ const [loading, setLoading] = useState(true);
     name,
     user,
     creteUser,
+   
     signInUser,
     singOutUser,
     signInGoogleUser,

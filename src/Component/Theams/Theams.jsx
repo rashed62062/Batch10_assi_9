@@ -1,12 +1,21 @@
 import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import product from '../../../img/product.jpg'
+import { toast } from 'react-toastify';
 
 const Theams = () => {
   // Initialize AOS on component mount
   useEffect(() => {
     AOS.init({ once: true }); // Animations run only once
   }, []);
+
+
+
+  const handlebuynoy = () => {
+    toast.success('Thanks for buying your awesome  product !')
+
+  }
 
   return (
     <div
@@ -25,7 +34,7 @@ const Theams = () => {
             data-aos-duration="1200"
           >
             <img
-              src="https://via.placeholder.com/400"
+              src={product}
               alt="Amino Acid Cleansing Mousse"
               className="w-full max-w-xs md:max-w-md rounded-lg shadow-lg"
             />
@@ -100,7 +109,11 @@ const Theams = () => {
               data-aos="flip-up"
               data-aos-duration="800"
             >
-              <button className="w-full md:w-auto px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
+              <button 
+
+              onClick={handlebuynoy}
+              
+              className="w-full md:w-auto px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
                 Buy Now
               </button>
             </div>
